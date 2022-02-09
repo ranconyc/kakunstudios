@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Section = ({ padding, children, className, ...props }) => {
   return (
     <section

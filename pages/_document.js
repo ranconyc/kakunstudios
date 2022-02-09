@@ -4,7 +4,7 @@ class MyDocument extends Document {
   render = () => (
     <Html dir="rtl" lang="he">
       <Head />
-      <body>
+      <body className="bg-sand-100">
         <Main />
         <NextScript />
       </body>

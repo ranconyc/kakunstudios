@@ -16,7 +16,7 @@ const Navbar = ({ scrolled, ...props }) => {
   return (
     <>
       {isMenuOpen && (
-        <div className="fixed top-0 bottom-0 right-0 left-0 z-10 bg-sand-100">
+        <div className="fixed inset-0 z-10 bg-sand-100">
           <ul className="grid gap-2 justify-center place-items-center pt-24 h-full">
             {navLinks.map(({ path, name }) => (
               <li
@@ -33,8 +33,8 @@ const Navbar = ({ scrolled, ...props }) => {
         </div>
       )}
       <header
-        className={`bg-transparent	flex justify-between items-center pt-2 pb-2 pl-4 pr-4 left-0 right-0 top-0 z-10 ${
-          scrolled ? 'fixed' : 'absolute'
+        className={`bg-transparent	flex justify-between items-center pt-2 pb-2 pr-4 pl-4 sm:pr-8 sm:pl-8 left-0 right-0 top-0 z-10 ${
+          scrolled ? 'fixed bg-sand-100/50' : 'absolute'
         }`}
       >
         {desktop ? (

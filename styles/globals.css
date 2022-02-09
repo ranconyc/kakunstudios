@@ -6,15 +6,36 @@ body {
   width: 100vw;
   height: 100vh;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
 
 h1 {
   font-size: 2.25rem;
-  line-height: 4.5rem;
-  font-weight: bold;
+  line-height: 4.25rem;
 }
 
 h2 {
   font-size: 1.75rem;
-  line-height: 3.5rem;
-  font-weight: bold;
+  line-height: 3.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }

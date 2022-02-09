@@ -7,7 +7,7 @@ const ServicesList = () => {
   const [services] = useState(servicesList);
 
   return (
-    <Section padding id="services" className="pb-4 bt-4">
+    <Section padding id="services" className="pb-10 pt-10">
       <h2>שירותים</h2>
       <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
         {services.map((service) => (

@@ -6,8 +6,14 @@ export const navLinks = [
 ];
 
 export const footerLinks = [
-  { name: 'instagram', path: '/about' },
-  { name: 'whatsapp', path: '#services' },
+  {
+    name: 'instagram',
+    path: 'instagram://user?username=talcohenk_interiordesign',
+  },
+  {
+    name: 'whatsapp',
+    path: 'whatsapp://send?phone=+972507313382&text=מעוניין לעבוד%2C%20ביחד',
+  },
 ];
 
 export const projectsList = [
@@ -30,22 +36,22 @@ export const projectsList = [
 
 export const servicesList = [
   {
-    name: 'privet',
+    name: 'דירות ובתים פרטים',
     description: `תכנון ועיצוב לדירות ובתים פרטיים`,
     icon: '/home.png',
   },
   {
-    name: 'commercial',
+    name: 'חללים מסחריים',
     description: `עיצוב משרדים וחללים מסחריים`,
     icon: '/commercial.png',
   },
   {
-    name: 'staging',
+    name: 'עיצוב פנים',
     description: `הלבשה והום סטיילינג`,
     icon: '/staging.png',
   },
   {
-    name: 'sale',
+    name: 'הכנה למכירה',
     description: `השבת נכסים למטרות מכירה או השכרה`,
     icon: '/sale.png',
   },
