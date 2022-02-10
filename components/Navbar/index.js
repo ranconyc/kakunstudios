@@ -16,12 +16,16 @@ const Navbar = ({ scrolled, ...props }) => {
   return (
     <>
       {isMenuOpen && (
-        <div className="fixed inset-0 z-10 bg-sand-100">
-          <ul className="grid gap-2 justify-center place-items-center pt-24 h-full">
+        <div
+          className={`fixed inset-0 z-10 bg-sand-100  -translate-x-3 ${
+            isMenuOpen && 'bg-sand-200 translate-x-0 transition-all'
+          }`}
+        >
+          <ul className="grid gap-2  place-items-center pt-24 h-full">
             {navLinks.map(({ path, name }) => (
               <li
                 key={name}
-                className="font-bold hover:cursor-pointe hover:text-primary border w-full"
+                className="w-full p-10 text-center hover:cursor-pointe hover:text-primary"
                 onClick={handleMenuOpen}
               >
                 <Link href={path}>
@@ -33,7 +37,7 @@ const Navbar = ({ scrolled, ...props }) => {
         </div>
       )}
       <header
-        className={`bg-transparent	flex justify-between items-center pt-2 pb-2 pr-4 pl-4 sm:pr-8 sm:pl-8 left-0 right-0 top-0 z-10 ${
+        className={`bg-transparent flex justify-between items-center pt-2 pb-2 pr-4 pl-4 sm:pr-8 sm:pl-8 left-0 right-0 top-0 z-10 ${
           scrolled ? 'fixed bg-sand-100/50' : 'absolute'
         }`}
       >
@@ -52,15 +56,24 @@ const Navbar = ({ scrolled, ...props }) => {
           </ul>
         ) : (
           <div className="grid gap-1">
-            {Array.from({ length: 3 }, (_, i) => {
-              i + 1;
-            }).map((_, i) => (
-              <div
-                key={i + Date.now().toString()}
-                onClick={handleMenuOpen}
-                className="bg-black h-1 w-6 rounded-lg hover:cursor-pointe"
-              ></div>
-            ))}
+            <div
+              onClick={handleMenuOpen}
+              className={`bg-black h-1 w-6 rounded-lg hover:cursor-pointe transition-all ${
+                isMenuOpen && ' translate-y-2 rotate-45'
+              }`}
+            />
+            <div
+              onClick={handleMenuOpen}
+              className={`bg-black h-1 w-6 rounded-lg hover:cursor-pointe transition-all ${
+                isMenuOpen && 'bg-orange-500'
+              }`}
+            />
+            <div
+              onClick={handleMenuOpen}
+              className={`bg-black h-1 w-6 rounded-lg hover:cursor-pointe transition-all ${
+                isMenuOpen && '-rotate-45 -translate-y-2'
+              }`}
+            />
           </div>
         )}
         <Logo />

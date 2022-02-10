@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { footerLinks } from '../../data';
 import { IoLogoWhatsapp, IoLogoInstagram } from 'react-icons/io';
+import { BsPhone, BsFillPersonFill } from 'react-icons/bs';
 import Input from '../Input';
 
 const Footer = () => {
@@ -38,9 +39,10 @@ const Footer = () => {
     <footer className="border-2 border-green-400 pr-4 pl-4 pt-10 pb-5 sm:pr-8 sm:pl-8 ">
       <h3 className="mb-2 ">צור קשר</h3>
       <div className="">
-        <div className="flex flex-col border-2 border-red-400 pt-2 pb-2">
+        <div className="flex flex-col pt-5 pb-5">
           <p>תשאיר פרטים אחזור אליך בהקדם</p>
           <Input
+            icon={<BsFillPersonFill />}
             label="שם"
             value={values.name}
             type="text"
@@ -49,6 +51,7 @@ const Footer = () => {
             onChange={handleChange}
           />
           <Input
+            icon={<BsPhone />}
             label="פלאפון"
             type="tel"
             value={values.phone}
@@ -58,11 +61,11 @@ const Footer = () => {
           />
           <button
             onClick={handleSubmit}
-            className={`${
+            className={` ${
               filled
                 ? 'border-orange-400 bg-orange-400 text-sand-100'
                 : 'border-gray-400 bg-gray-400 text-sand-100'
-            }  border-2 rounded  text-lg font-bold pr-8 pl-8`}
+            }  border-2 rounded  text-lg font-bold mt-2`}
           >
             שלח
           </button>
