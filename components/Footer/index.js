@@ -35,11 +35,11 @@ const Footer = () => {
   };
 
   return (
-    <footer className="pr-4 pl-4 pt-10 pb-5 sm:pr-8 sm:pl-8 ">
-      <h3 className="mb-2">צור קשר</h3>
-      <p>תשאיר פרטים אחזור אליך בהקדם</p>
-      <div className="flex justify-between">
-        <div className="flex justify-between items-center">
+    <footer className="border-2 border-green-400 pr-4 pl-4 pt-10 pb-5 sm:pr-8 sm:pl-8 ">
+      <h3 className="mb-2 ">צור קשר</h3>
+      <div className="">
+        <div className="flex flex-col border-2 border-red-400 pt-2 pb-2">
+          <p>תשאיר פרטים אחזור אליך בהקדם</p>
           <Input
             label="שם"
             value={values.name}

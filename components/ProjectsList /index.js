@@ -8,8 +8,8 @@ const ProjectsList = () => {
 
   return (
     <Section padding id="projects" className="pb-10 pt-10">
-      <h2>פרויקטים</h2>
-      <div className="grid sm:grid-cols-3 gap-2">
+      <h2 className="w-fit">פרויקטים</h2>
+      <div className="grid mt-3 sm:grid-cols-3 gap-5">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
