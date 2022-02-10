@@ -10,15 +10,8 @@ const AboutPage = () => {
     <Layout title="About" padding>
       <Section
         padding
-        className="h-full sm:flex sm:justify-around sm:items-center "
+        className=" pt-10 pb-24 md:pt-24 sm:flex sm:justify-around sm:items-center sm:flex-row-reverse "
       >
-        <div
-          className="relative isolate  sm:w-1/2 sm:p-6 before:content-['']
-        before:absolute before:bottom-20 before:right-0  before:h-60 before:w-60 before:rounded-full before:bg-sand-200 before:-z-10 "
-        >
-          <h1>{about.title}</h1>
-          <p>{about.content}</p>
-        </div>
         <Image
           src={about.image}
           alt="me"
@@ -26,6 +19,14 @@ const AboutPage = () => {
           height={desktop ? 447 : 894}
           className="rounded"
         />
+        <div
+          className="relative isolate mt-12
+      sm:w-1/2 sm:p-6 before:content-['']
+        before:absolute before:bottom-5 before:right-0  before:h-60 before:w-60 before:rounded-full before:bg-sand-200 before:-z-10 "
+        >
+          <h1>{about.title}</h1>
+          <p>{about.content}</p>
+        </div>
       </Section>
     </Layout>
   );

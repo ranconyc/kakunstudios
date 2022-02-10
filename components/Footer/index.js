@@ -36,7 +36,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="border-2 border-green-400 pr-4 pl-4 pt-10 pb-5 sm:pr-8 sm:pl-8 ">
+    <footer className="pr-4 pl-4 pt-10 pb-5 sm:pr-8 sm:pl-8 ">
       <h3 className="mb-2 ">צור קשר</h3>
       <div className="">
         <div className="flex flex-col pt-5 pb-5">
