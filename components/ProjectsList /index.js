@@ -7,7 +7,7 @@ const ProjectsList = () => {
   const [projects] = useState(projectsList);
 
   return (
-    <Section padding id="projects" className="pb-10 pt-10">
+    <Section padding id="projects" className="py-10">
       <h2 className="w-fit">פרויקטים</h2>
       <div className="grid mt-3 sm:grid-cols-3 gap-5">
         {projects.map((project) => (

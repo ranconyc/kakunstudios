@@ -1,14 +1,14 @@
 export const navLinks = [
-  { name: `אודות`, path: '/about' },
+  { name: `אודות`, path: '#about' },
   { name: `שירותים`, path: '#services' },
   { name: `פרויקטים`, path: '#projects' },
-  { name: `יצירת קשר`, path: '/contact' },
+  { name: `יצירת קשר`, path: '#contact' },
 ];
 
 export const footerLinks = [
   {
     name: 'instagram',
-    path: 'instagram://user?username=talcohenk_interiordesign',
+    path: 'instagram://user?username=talcohenk_design',
   },
   {
     name: 'whatsapp',
@@ -23,14 +23,22 @@ export const projectsList = [
     slug: 'apartment-ramat-gan',
   },
   {
-    name: `דירה בתל אביב, ישראל`,
+    name: 'N.P Apartment',
+    date: `מאי 2021`,
+    size: `דירת 4 חדרים 100מ״ר`,
+    location: `רינתיה`,
     cover: '/apartment2.jpg',
     slug: 'apartment-tel-aviv',
+    images: [{ name: `דירה`, path: '/apartment3.jpg' }],
   },
   {
-    name: `דירה בשוהם, ישראל`,
+    name: `M.R Apartment`,
+    date: `ספטמבר 2022`,
+    size: `דירת 3 חדרים 80מ״ר`,
+    location: `שוהם`,
     cover: '/apartment3.jpg',
     slug: 'apartment-shoham',
+    images: [{ name: `דירה`, path: '/apartment3.jpg' }],
   },
 ];
 

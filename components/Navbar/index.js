@@ -1,16 +1,13 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import Logo from '../Logo';
+import Logo from '../common/Logo';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import { navLinks as links } from '../../data';
 
 const Navbar = ({ scrolled, ...props }) => {
   const [navLinks] = useState(links);
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const desktop = useMediaQuery('(min-width: 1024px)');
-
   const handleMenuOpen = () => setIsMenuOpen((pre) => !pre);
 
   return (
@@ -37,7 +34,7 @@ const Navbar = ({ scrolled, ...props }) => {
         </div>
       )}
       <header
-        className={`bg-transparent flex justify-between items-center pt-2 pb-2 pr-4 pl-4 sm:pr-8 sm:pl-8 left-0 right-0 top-0 z-10 ${
+        className={`bg-transparent flex justify-between items-center py-2 px-4 sm:px-8 left-0 right-0 top-0 z-10 ${
           scrolled ? 'fixed bg-sand-100/50' : 'absolute'
         }`}
       >

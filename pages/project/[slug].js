@@ -1,17 +1,23 @@
-import { useState, useEffect } from 'react';
 import Layout from '../../components/Layout';
+import Section from '../../components/Section';
+import Image from 'next/image';
 import { projectsList } from '../../data';
-const ProjectPage = (props) => {
-  const { slug } = props;
-  const [currentProject, setCurrentProject] = useState(null);
-
-  useEffect(() => {
-    setCurrentProject(projectsList.filter((project) => project.slug === slug));
-  }, [slug]);
-
+const ProjectPage = ({ project, ...props }) => {
+  console.log(project);
   return (
     <Layout title="projects" padding>
-      {currentProject?.name}
+      <Section title={project.name}>
+        <h1>{project?.name}</h1>
+        {project.images.map((image) => (
+          <Image
+            key={image.name}
+            src={image.path}
+            alt={image.name}
+            width={100}
+            height={300}
+          />
+        ))}
+      </Section>
     </Layout>
   );
 };
@@ -20,7 +26,9 @@ export default ProjectPage;
 
 export const getStaticProps = async (context) => {
   const slug = context.params.slug;
-  return { props: { slug } };
+  const project = projectsList.filter((project) => project.slug === slug)[0];
+
+  return { props: { project } };
 };
 
 export const getStaticPaths = async () => {
