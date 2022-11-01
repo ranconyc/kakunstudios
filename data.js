@@ -66,12 +66,16 @@ export const servicesList = [
 ];
 
 export const desktopImages = [
-  '/image1dk.jpg',
-  '/image2dk.jpg',
-  '/image3dk.jpg',
+  { src: '/image1dk.jpg', alt: 'project' },
+  { src: '/image2dk.jpg', alt: 'project' },
+  { src: '/image3dk.jpg', alt: 'project' },
 ];
 
-export const mobileImages = ['/image1mb.jpg', '/image2mb.jpg', '/image3mb.jpg'];
+export const mobileImages = [
+  { src: '/image1mb.jpg', alt: 'project' },
+  { src: '/image2mb.jpg', alt: 'project' },
+  { src: '/image3mb.jpg', alt: 'project' },
+];
 
 export const about = {
   image: '/about.jpg',

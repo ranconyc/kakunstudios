@@ -8,7 +8,7 @@ const ProjectsList = () => {
 
   return (
     <Section padding id="projects" className="py-10">
-      <h2 className="w-fit">פרויקטים</h2>
+      <h2 className="text-center">פרויקטים</h2>
       <div className="grid mt-3 sm:grid-cols-3 gap-5">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />

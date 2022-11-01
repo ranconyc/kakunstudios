@@ -25,9 +25,7 @@ const Navbar = ({ scrolled, ...props }) => {
                 className="w-full p-10 text-center hover:cursor-pointe hover:text-primary"
                 onClick={handleMenuOpen}
               >
-                <Link href={path}>
-                  <a>{name}</a>
-                </Link>
+                <Link href={path}>{name}</Link>
               </li>
             ))}
           </ul>
@@ -45,9 +43,7 @@ const Navbar = ({ scrolled, ...props }) => {
                 key={name}
                 className="ml-4 font-bold hover:cursor-pointe hover:text-primary"
               >
-                <Link href={path}>
-                  <a>{name}</a>
-                </Link>
+                <Link href={path}>{name}</Link>
               </li>
             ))}
           </ul>

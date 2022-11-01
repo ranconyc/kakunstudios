@@ -41,3 +41,14 @@ p {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.slide-active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
